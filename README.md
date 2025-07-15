@@ -2,7 +2,7 @@
 
 ## 🌐 Live Demo
 
-[🔗 View Live Site](https://get-cater.vercel.app)
+🔗[View Live Site](https://get-cater.vercel.app)
 
 **GetCater** is a mobile-friendly web platform built using **React**, **Firebase**, and **TailwindCSS**. It enables **rural catering service providers** to showcase and sell their homemade food products directly to customers. The system empowers local talents, supports cultural food diversity, and bridges the gap between rural businesses and the global market.
 
