@@ -22,75 +22,6 @@ import NavigateTo from './components/NavigateTo';
 import ChatBot from 'react-simple-chatbot';
 import { ThemeProvider } from 'styled-components';
 
-const steps = [
-  {
-    id: '0',
-    message: 'Hey sir/madam!',
-    trigger: '1',
-  },
-  {
-    id: '1',
-    message: 'Please write your username',
-    trigger: '2',
-  },
-  {
-    id: '2',
-    user: true,
-    trigger: '3',
-  },
-  {
-    id: '3',
-    message: "Hi {previousValue}, how can I help you?",
-    trigger: '4',
-  },
-  {
-    id: '4',
-    options: [
-      { value: 1, label: 'Order Food', trigger: 'orderFood' },
-      { value: 2, label: 'Room Booking', trigger: 'roomBooking' },
-      { value: 3, label: 'Hall Booking', trigger: 'hallBooking' },
-      { value: 4, label: 'Table Booking', trigger: 'tableBooking' },
-    ],
-  },
-  {
-    id: 'orderFood',
-    component: <NavigateTo to="/allproduct" triggerNextStep={true} />,
-    trigger: '5',
-  },
-  {
-    id: 'roomBooking',
-    component: <NavigateTo to="/category/Room" triggerNextStep={true} />,
-    trigger: '5',
-  },
-  {
-    id: 'hallBooking',
-    component: <NavigateTo to="/category/Hall" triggerNextStep={true} />,
-    trigger: '5',
-  },
-  {
-    id: 'tableBooking',
-    component: <NavigateTo to="/category/Table" triggerNextStep={true} />,
-    trigger: '5',
-  },
-  {
-    id: '5',
-    message: "Is there any other booking?",
-    trigger: '6',
-  },
-  {
-    id: '6',
-    options: [
-      { value: 1, label: 'YES', trigger: '4' },
-      { value: 2, label: 'NO', trigger: '7' },
-    ],
-  },
-  {
-    id: '7',
-    message: "Thank you, do not hesitate to ask for help regarding booking issues.",
-    end: true,
-  },
-];
-
 const theme = {
   background: '#C9FF8F',
   headerBgColor: '#FFA509',
@@ -143,13 +74,6 @@ const App = () => {
           } />
         </Routes>
         <Toaster />
-        <ThemeProvider theme={theme}>
-          <ChatBot
-            headerTitle="RMS bot"
-            steps={steps}
-            {...config}
-          />
-        </ThemeProvider>
       </Router>
     </MyState>
   );
