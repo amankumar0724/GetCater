@@ -1,70 +1,94 @@
-# Getting Started with Create React App
+# 🍱 GetCater – Traditional Catering Portal
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 🌐 Live Demo
 
-## Available Scripts
+[🔗 View Live Site](https://get-cater.vercel.app)
 
-In the project directory, you can run:
+**GetCater** is a mobile-friendly web platform built using **React**, **Firebase**, and **TailwindCSS**. It enables **rural catering service providers** to showcase and sell their homemade food products directly to customers. The system empowers local talents, supports cultural food diversity, and bridges the gap between rural businesses and the global market.
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 🧾 Problem Statement
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Rural towns in India have immense potential in catering services, but lack a centralized platform to promote or sell their products. **GetCater** solves this by offering a portal where users can either:
 
-### `npm test`
+- **Browse and purchase** catering items (as customers), or  
+- **Upload and manage** their own food items (as caterers/admins)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+This creates a two-way ecosystem where Indian tradition and entrepreneurship are digitally promoted.
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 👨‍💼 System Modules & Roles
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 👤 Admin (Caterers)
+- Register/Login
+- Upload & edit product details
+- View all orders placed
+- Track product analytics (future)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 👥 User (Customers)
+- Register/Login
+- View all products
+- Add to cart
+- Place orders
+- View order history
+- Manage profile
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## ⚙️ Tech Stack
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+| Layer             | Technology                          | Purpose                                       |
+|------------------|--------------------------------------|-----------------------------------------------|
+| **Frontend**      | [React.js](https://reactjs.org/)     | SPA architecture                              |
+| **Styling**       | [TailwindCSS](https://tailwindcss.com/) | Fast, utility-first responsive design     |
+| **Routing**       | [React Router](https://reactrouter.com/) | Navigation and role-based route protection |
+| **Authentication**| [Firebase Auth](https://firebase.google.com/) | Secure login/register flows                |
+| **Database**      | [Firebase Firestore](https://firebase.google.com/) | NoSQL product & order storage         |
+| **Hosting**       | [Firebase Hosting](https://firebase.google.com/) | Cloud deployment                             |
+| **Logging**       | JavaScript logging module            | Every action logged with context              |
+| **Testing**       | Jest + Firebase Emulator             | Unit & integration testing                    |
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 🔍 Core Features
 
-## Learn More
+- 🔐 Role-based registration/login via Firebase Auth
+- 📦 Product upload and storage (image, name, price, category)
+- 🛒 Cart system with product quantity tracking
+- 📑 Order placement and history
+- 🖼️ Responsive design for mobile users
+- 🧾 Basic profile management
+- 📜 Action logging for transparency
+- ☁️ Firebase-based real-time database updates
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 🧠 Solution Design (LLD Summary)
 
-### Code Splitting
+| Module            | Description                                                              |
+|-------------------|---------------------------------------------------------------------------|
+| Auth Module       | Firebase-based signup/login using email/password                         |
+| Product Module    | Allows admin to upload, update, and delete food items                    |
+| Cart Module       | Local or Firestore-based cart management                                 |
+| Order Module      | Stores placed orders, customer ID, timestamps                            |
+| Profile Module    | Allows users to update and view their own profile                        |
+| Logging Utility   | Logs all interactions like product upload, order placement, profile edit |
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+<!-- 📄 Full LLD: `architecture/ll-document.pdf`
+-->
+---
 
-### Analyzing the Bundle Size
+## 🏗️ System Architecture
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```plaintext
+[React Frontend (Tailwind)]
+     ↓
+[Firebase Auth]
+     ↓
+[Role-based Routing]
+     ↓
+[Firestore DB]
+     ↓
+[JS Logging Utility]
