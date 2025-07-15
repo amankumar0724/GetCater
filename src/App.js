@@ -19,7 +19,6 @@ import { ProtectedRouteForAdmin } from './protectedRoute/ProtectedRouteForAdmin'
 import CategoryPage from './pages/category/CategoryPage';
 import NavigateTo from './components/NavigateTo';
 
-import ChatBot from 'react-simple-chatbot';
 import { ThemeProvider } from 'styled-components';
 
 const theme = {
@@ -33,10 +32,6 @@ const theme = {
   userFontColor: 'white',
 };
 
-const config = {
-  botAvatar: '/images/chat.png',  // Make sure this path is correct
-  floating: true,
-};
 
 const App = () => {
   return (

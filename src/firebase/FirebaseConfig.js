@@ -4,14 +4,15 @@ import { getAuth, GoogleAuthProvider } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCm_uBkhniYYWA3P-AZMrydItc6Aw8AAXE",
-  authDomain: "ecommer-3a799.firebaseapp.com",
-  projectId: "ecommer-3a799",
-  storageBucket: "ecommer-3a799.appspot.com",
-  messagingSenderId: "239245312753",
-  appId: "1:239245312753:web:20ee7091ff9ebbaafa1f50",
-  measurementId: "G-VZB0G5G4C8"
+  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
+  authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.REACT_APP_FIREBASE_APP_ID,
+  measurementId: process.env.REACT_APP_FIREBASE_MEASUREMENT_ID,
 };
+
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
