@@ -46,9 +46,7 @@ This creates a two-way ecosystem where Indian tradition and entrepreneurship are
 | **Routing**       | [React Router](https://reactrouter.com/) | Navigation and role-based route protection |
 | **Authentication**| [Firebase Auth](https://firebase.google.com/) | Secure login/register flows                |
 | **Database**      | [Firebase Firestore](https://firebase.google.com/) | NoSQL product & order storage         |
-| **Hosting**       | [Firebase Hosting](https://firebase.google.com/) | Cloud deployment                             |
 | **Logging**       | JavaScript logging module            | Every action logged with context              |
-| **Testing**       | Jest + Firebase Emulator             | Unit & integration testing                    |
 
 ---
 
