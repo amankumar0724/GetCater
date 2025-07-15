@@ -58,9 +58,9 @@ const App = () => {
             </ProtectedRouteForUser>
           } />
           <Route path="/admin-dashboard" element={
-            // <ProtectedRouteForAdmin>
+            <ProtectedRouteForAdmin>
               <AdminDashboard />
-            // </ProtectedRouteForAdmin>
+            </ProtectedRouteForAdmin>
           } />
           <Route path="/addproduct" element={
             <ProtectedRouteForAdmin>
